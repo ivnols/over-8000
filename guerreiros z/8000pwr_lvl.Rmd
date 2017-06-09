@@ -1,0 +1,99 @@
+---
+title: "###Regressão Linear (Simples) com mais de 8000 pwr lvl"
+author: "Ciro e Ivão"
+date: ""
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: united
+---
+
+
+\ 
+
+
+###Oi, eu sou o ~~Goku~~...
+
+Falando sério, rapeize... nesse tutorial nós vamos tentar ensinar a vocês *vermes insolentes* como fazer uma regressão linear **lendária com mais de 8000**.
+
+![](http://2.bp.blogspot.com/-ybY9yiBwrrA/TZUsHVLQ6fI/AAAAAAAAAAg/tRfY2vuPEVw/s1600/nappa+8mil.jpg)
+
+\ 
+
+Para isso, vamos precisar de ~~cola, tesoura, fita isolante~~ da função lm e os dados de **tempo de treinamento** e **poder de luta**, além de um pouco de paciência e jogo de cintura pra isso.
+Primeiro você precisa baixar os dados de cada guerreiro nesse [link](dropbox) e exportar para o seu ambiente de programação favorito, o R.
+
+
+\ 
+
+P.S.:Se você não sabe como exportar dados para o R, ~~azar o seu~~ siga esse [link](https://cantinhodor.files.wordpress.com/2015/03/introduc3a7c3a3o-ao-software-r-para-biologia-marcos-vital-ufal-marc3a7o-2015.pdf).
+
+P.S(2).: Se você não sabe como escolher o diretório, siga esse [link](https://cantinhodor.files.wordpress.com/2015/03/introduc3a7c3a3o-ao-software-r-para-biologia-marcos-vital-ufal-marc3a7o-2015.pdf).
+
+P.S(3).: Se depois desses links você continuar se sentindo perdido, assista esse [vídeo](https://www.youtube.com/watch?v=VU3CUnP6_0A).
+![](http://media3.giphy.com/media/ANbD1CCdA3iI8/200.gif)
+
+***
+
+\ 
+
+####Falando sério, agora!
+
+#### - Primeiro passo:
+criar o objeto "dados", que na verdade se chama Kakaroto (um exemplo).
+
+```{r eval=TRUE, echo=TRUE}
+kakaroto <-read.table ("mais de 8000 tab.csv", h=T)
+```
+
+Pra garantir, dá um *summary* pra conferir.
+
+```{r eval=TRUE, echo=TRUE}
+summary (kakaroto)
+
+```
+
+Tá tudo certo? Bola pra frente...
+
+##### - Segundo passo:
+
+Já que vocês são jovens padawans, o conselho é que dêem um *attach* no objeto **kakaroto**, assim, cada elemento desse objeto se torna um objeto dentro do objeto.
+
+```{r eval=FALSE, echo=TRUE}
+attach (kakaroto)
+```
+
+E agora vem a parte boa, **calcular a regressão linear** do poder de kakaroto em função do tempo de treinamento.
+
+![](http://vignette1.wikia.nocookie.net/pl.dragonball/images/c/c0/SonGoku.png/revision/latest?cb=20111212174032&format=original)
+
+\ 
+
+A função para calcular a regressão linear é *lm*
+
+```{r eval = FALSE, echo = TRUE}
+lm (Pwr_Lvl~Time_training)
+```
+
+Confere o resultado...
+
+```{r eval = FALSE, echo = TRUE}
+summary (lm(Pwr_Lvl~Time_training))
+```
+Deu tudo certo? valor de P e essas coisas?
+
+Ótimo, vamos ver no gráfico!
+
+
+```{r eval=FALSE, echo=TRUE}
+plot(Pwr_Lvl~Time_training, xlab="Tempo de treinamento", ylab="pwr lvl")
+```
+
+![](https://s-media-cache-ak0.pinimg.com/736x/ed/57/f0/ed57f0707ceb8ee59536002f9c4a6e56.jpg)
+
+\
+___
+#### No próximo episódio: ~~Frieza Morre~~  **Regressão Linear Múltipla** ####
+___
+

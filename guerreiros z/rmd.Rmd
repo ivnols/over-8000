@@ -1,0 +1,42 @@
+---
+title: "tutorial markdown"
+author: "ivão"
+date: "7 de junho de 2017"
+output: html_document
+---
+
+Elementos básicos do idioma markdown
+
+**negrito**
+
+*itálico*
+
+Títulos
+
+# granded
+
+## menos grande
+
+### subtítulo
+
+#### sei lá...
+
+pra inserir uma linha divisória usa asteriscos
+
+***
+
+se quiser um espaço maior entre linhas usa uma \
+
+\
+
+se quiser espaço maior com uma divisória usa o mesmo lance e combina com asteriscos
+
+\
+
+***
+
+\
+
+pra inserir links escreve as coisas entre colchetes
+
+[link para lugar nenhum]

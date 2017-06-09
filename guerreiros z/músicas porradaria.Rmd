@@ -1,0 +1,12 @@
+---
+title: "###Músicas para cenas com porradaria e confusões"
+author: "Ivão"
+date: "7 de junho de 2017"
+output: html_document
+---
+
+*atualizável a qualquer momento*
+
+* Claire de Lune - Debussy
+* Lakmé - Léo Delibes
+* Passacaille - Ravel (essa é pra uma porradaria mais leve)
